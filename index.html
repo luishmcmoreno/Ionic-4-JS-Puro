@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ionic Test</title>
+</head>
+<body>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title> Ionic Test</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="outer-content">
+      <ion-list>
+        <ion-list-header> Isso funciona?</ion-list-header>
+        <ion-item tappable onClick="seraQueFunciona()">
+          <ion-icon name="home" color="primary" slot="start"></ion-icon>
+          Será que funciona?
+        </ion-item>
+        <ion-item>
+          <ion-label> Vamos testar?</ion-label>
+          <ion-toggle id="toggle" color="primary"></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-app>
+  <script src="https://unpkg.com/@ionic/core@0.1.4-8/dist/ionic.js"></script>
+  <script>
+    function seraQueFunciona() {
+      const toggle = document.getElementById('toggle');
+      toggle.checked = !toggle.checked;
+      console.log('Novo valor de toggle é: ', toggle.checked);
+      console.log(toggle);
+    }
+  </script>
+</body>
+</html>
